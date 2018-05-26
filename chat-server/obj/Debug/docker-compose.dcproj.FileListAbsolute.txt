@@ -1,0 +1,1 @@
+/Users/itonik/Projects/chat-server/obj/Debug/docker-compose.dcproj.CoreCompileInputs.cache

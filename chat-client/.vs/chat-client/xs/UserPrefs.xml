@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{9348EFC4-8707-4EFF-B1C8-0AB233164AB4}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="chat-client/Program.cs">
+    <Files>
+      <File FileName="chat-client/wwwroot/chat/Index.html" Line="11" Column="16" />
+      <File FileName="chat-client/appsettings.json" Line="1" Column="1" />
+      <File FileName="chat-client/appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="chat-client/Properties/launchSettings.json" Line="19" Column="12" />
+      <File FileName="chat-client/Dockerfile" Line="22" Column="53" />
+      <File FileName="chat-client/ChatController.cs" Line="27" Column="41" />
+      <File FileName="chat-client/wwwroot/Index.html" Line="1" Column="1" />
+      <File FileName="chat-client/Program.cs" Line="17" Column="1" />
+      <File FileName="chat-client/Startup.cs" Line="46" Column="18" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.chat-client PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>chat-server</name>
+    </assembly>
+    <members>
+        <member name="M:chat_server.ApiController.GetToken(System.String,System.String)">
+            <summary>
+            Checks <paramref name="username"/>-<paramref name="password"/> and returns token
+            </summary>
+            <param name="username">Username from Input form</param>
+            <param name="password">Password from Input form</param>
+            <remarks>
+            If user exist, checks password. If password is correct, returns new token
+            Otherwise returns "ERROR_TOKEN"
+            If user do not exist, registers new user with usrname and password given
+            </remarks>
+            <returns>New Generated token OR "ERROR_TOKEN"</returns>
+            <response code="200">Returns the newly created token if password is correct or it is new user OR ERROR_TOKEN if password was incorrect</response>
+        </member>
+        <member name="M:chat_server.ApiController.SendMessageWithToken(System.Int32,System.String,System.String)">
+            <summary>
+            Sends message from <paramref name="forId"/> with text <paramref name="message"/> and returns result code
+            </summary>
+            <param name="forId">Message receiver ID</param>
+            <param name="message">Message text</param>
+            <param name="cookieToken">Senders token from cookie</param>
+            <produces>text/plain</produces>
+            <returns>-1 or 0</returns>
+            <response code="200">0 if message was sended; -1 if message was not sended</response>
+        </member>
+        <member name="M:chat_server.ApiController.MessageLayoutCookieOld(System.Int32,System.String)">
+            <summary>
+            Returns html container with messages from user <paramref name="id"/>
+            </summary>
+            <param name="id">ID of user (receiver) or -1 if user is not selected</param>
+            <param name="cookieToken">Senders token from cookie</param>
+            <remarks>
+            Creates view from file MessageLayot if <paramref name="id"/>d != -1
+            Or EmptyMessageLayout if <paramref name="id"/> = -1
+            Can return 403 if token is not valid
+            </remarks>
+            <returns>HTML container with messages from user <paramref name="id"/></returns>
+            <response code="200">HTML container with messages from user <paramref name="id"/></response>
+            <response code="403">Cookie was not valid</response>
+        </member>
+        <member name="M:chat_server.ApiController.UserLayout">
+            <summary>
+            Returns html container with registred users list
+            </summary>
+            <returns>HTML container with registred users list</returns>
+            <response code="200">HTML container with messages from user <paramref name="id"/></response>
+        </member>
+        <member name="M:chat_server.ApiController.UserLayoutNew">
+            <summary>
+            Returns html container with registred users list WITHOUT USING RAZOR
+            </summary>
+            <returns>HTML container with registred users list</returns>
+            <response code="200">HTML container with messages from user <paramref name="id"/></response>
+        </member>
+        <member name="M:chat_server.ApiController.MessageLayoutCookie(System.Int32,System.String)">
+            <summary>
+            Returns html container with messages from user <paramref name="id"/>
+            </summary>
+            <param name="id">ID of user (receiver) or -1 if user is not selected</param>
+            <param name="cookieToken">Senders token from cookie</param>
+            <remarks>
+            Creates view from file MessageLayot if <paramref name="id"/>d != -1
+            Or EmptyMessageLayout if <paramref name="id"/> = -1
+            Can return 403 if token is not valid
+            </remarks>
+            <returns>HTML container with messages from user <paramref name="id"/></returns>
+            <response code="200">HTML container with messages from user <paramref name="id"/></response>
+            <response code="403">Cookie was not valid</response>
+        </member>
+    </members>
+</doc>

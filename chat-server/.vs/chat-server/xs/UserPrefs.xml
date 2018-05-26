@@ -1,0 +1,24 @@
+﻿<Properties StartupConfiguration="{FAB0C0D1-2FCF-4F50-AF3E-B1D255ECF478}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="chat-server/ApiController.cs">
+    <Files>
+      <File FileName="chat-server/Startup.cs" Line="42" Column="46" />
+      <File FileName="chat-server/Program.cs" Line="17" Column="1" />
+      <File FileName="chat-server/ApiController.cs" Line="268" Column="37" />
+      <File FileName="chat-server/Dockerfile" Line="1" Column="1" />
+      <File FileName="chat-server/appsettings.json" Line="1" Column="1" />
+      <File FileName="chat-server/appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="chat-server/Properties/launchSettings.json" Line="6" Column="47" />
+      <File FileName="chat-server/DBLogic.cs" Line="1" Column="1" />
+      <File FileName="chat-server/Views/Api/UserLayout.cshtml" Line="16" Column="7" />
+      <File FileName="chat-server/Views/Api/MessageLayout.cshtml" Line="1" Column="1" />
+      <File FileName="chat-server/Views/Api/EmptyMessageLayout.cshtml" Line="5" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.chat-server PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>

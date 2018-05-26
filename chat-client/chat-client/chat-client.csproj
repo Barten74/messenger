@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Pages\About.cshtml.cs" />
+    <Compile Remove="Pages\Index.cshtml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Pages\About.cshtml" />
+    <Content Remove="Pages\Contact.cshtml" />
+    <Content Remove="Pages\Index.cshtml" />
+    <Content Remove="Views\Chat\Auth.cshtml" />
+    <Content Remove="Views\Chat\Chat.cshtml" />
+    <Content Remove="wwwroot\css\site.js" />
+    <Content Remove="Views\_ViewImports.cshtml" />
+    <Content Remove="Views\_ViewStart.cshtml" />
+    <Content Remove="Views\Shared\_Layout.cshtml" />
+    <Content Remove="Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <Content Remove="Views\Shared\Error.cshtml" />
+    <Content Remove="wwwroot\js\site.js" />
+    <Content Remove="wwwroot\Auth.cshtml" />
+    <Content Remove="wwwroot\Chat.cshtml" />
+    <Content Remove="wwwroot\chat\Chat.html" />
+    <Content Remove="wwwroot\Index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="wwwroot\chat\Index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Views\Chat\Auth.cshtml" />
+    <None Include="Views\Chat\Chat.cshtml" />
+    <None Include="wwwroot\css\site.js" />
+    <None Include="Views\_ViewImports.cshtml" />
+    <None Include="Views\_ViewStart.cshtml" />
+    <None Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
+    <None Include="Views\Shared\Error.cshtml" />
+    <None Include="wwwroot\js\site.js" />
+    <None Include="wwwroot\Index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="Views\Chat\" />
+    <Folder Include="Views\Shared\" />
+    <Folder Include="wwwroot\chat\" />
+  </ItemGroup>
+</Project>

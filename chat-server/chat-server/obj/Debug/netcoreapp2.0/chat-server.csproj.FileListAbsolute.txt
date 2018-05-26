@@ -1,0 +1,12 @@
+/Users/itonik/Projects/chat-server/chat-server/obj/Debug/netcoreapp2.0/chat-server.csprojResolveAssemblyReference.cache
+/Users/itonik/Projects/chat-server/chat-server/obj/Debug/netcoreapp2.0/chat-server.csproj.CoreCompileInputs.cache
+/Users/itonik/Projects/chat-server/chat-server/obj/Debug/netcoreapp2.0/chat-server.AssemblyInfoInputs.cache
+/Users/itonik/Projects/chat-server/chat-server/obj/Debug/netcoreapp2.0/chat-server.AssemblyInfo.cs
+/Users/itonik/Projects/chat-server/chat-server/bin/Debug/netcoreapp2.0/chat-server.deps.json
+/Users/itonik/Projects/chat-server/chat-server/bin/Debug/netcoreapp2.0/chat-server.runtimeconfig.json
+/Users/itonik/Projects/chat-server/chat-server/bin/Debug/netcoreapp2.0/chat-server.runtimeconfig.dev.json
+/Users/itonik/Projects/chat-server/chat-server/bin/Debug/netcoreapp2.0/chat-server.dll
+/Users/itonik/Projects/chat-server/chat-server/bin/Debug/netcoreapp2.0/chat-server.pdb
+/Users/itonik/Projects/chat-server/chat-server/obj/Debug/netcoreapp2.0/chat-server.dll
+/Users/itonik/Projects/chat-server/chat-server/obj/Debug/netcoreapp2.0/chat-server.pdb
+/Users/itonik/Projects/chat-server/chat-server/bin/Debug/netcoreapp2.0/Swagger.xml

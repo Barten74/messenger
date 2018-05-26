@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chat-server", "chat-server\chat-server.csproj", "{FAB0C0D1-2FCF-4F50-AF3E-B1D255ECF478}"
+EndProject
+Global
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAB0C0D1-2FCF-4F50-AF3E-B1D255ECF478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAB0C0D1-2FCF-4F50-AF3E-B1D255ECF478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAB0C0D1-2FCF-4F50-AF3E-B1D255ECF478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAB0C0D1-2FCF-4F50-AF3E-B1D255ECF478}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,29 @@
+﻿@{
+
+    Layout = null;
+    Dictionary<int, string> usernamesDict = ViewData["UsernamesDict"] as Dictionary<int, string>;
+    List<chat_server.Models.Message> messageList = ViewData["MessageList"] as List<chat_server.Models.Message>;
+    int friendId = Convert.ToInt32(ViewData["CurrentFriendId"].ToString());
+    string friendUsername = usernamesDict[friendId];
+}
+
+
+<div class="messagesPanelContainer">
+    <div class="friendUsername"><span class="friendUsernameSpan">Chat with <b>@(friendUsername)</b></span></div>
+    <div class="messageListContainer" id="messageListContainer">
+        @foreach (chat_server.Models.Message message in messageList)
+    {
+        <div class="messageContainer">
+            <b class="userStamp">
+                @(usernamesDict[message.from_id]):
+            </b>
+            <div class="messageText">
+                @(message.text)
+            </div>
+            <i class="dateTimeStamp">
+                @(message.sendTime)
+            </i>
+        </div>
+}
+    </div>
+</div>

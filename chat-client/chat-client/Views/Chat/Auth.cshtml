@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Chat";
+}
+
+<script>serverAdresss = "http://localhost:4000"</script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+<script>var getToken = function() {
+        username = document.getElementById('loginInput').value;
+        password = document.getElementById('passwordInput').value;
+        
+        if (username == "" || password == "") {
+            alert("Enter valid username and password");
+            return;
+        }
+        // $ - JQuery объект (библиотека)
+        // Делает Get запрос. После того, как он выполнится, вызывает сделанную на лету функцию
+        // $ кладет в аргумент функции то, что вернул Get.
+        $.get(serverAdresss + "/api/get_token/username=" + username + "&password=" + password).done(function(data) {
+            var token = data;
+            if (token == "ERROR_TOKEN") {
+                alert("Wrong username or password");
+            } else {
+                document.cookie = "token=" + token;
+                window.location.replace("/chat/")
+            }
+        });
+        }
+</script>
+
+<style>
+    .loginDivContainer {
+        height: 100%;
+        width: 100%;
+    }
+    .loginDiv {
+        margin: auto;
+        width: 90%;
+        max-width: 200px;
+        height: 200px;
+        background-color: #5d8aa8;
+        border: solid 1px black;
+    }
+    .loginInputContainer, .passwordInputContainer{
+        width:80%;
+        height: 30%;
+        margin:auto;
+        padding-top: 5%;
+    }
+    .buttonContainer {
+        width: 80%;
+        height: 40%;
+        margin: auto;
+    }
+    #loginInput, #passwordInput {
+        height: 95%;
+        width: 100%;
+    }
+    #submitButton {
+        height: 50%;
+        width: 100%;
+        margin-top: 10%;
+        background-color: #85bb65;
+        border: solid 1px black;
+    }
+</style>
+
+<div class="loginDivContainer">
+    <div class="loginDiv">
+        <div class="loginInputContainer">
+            <input id="loginInput" placeholder="Login"/>
+        </div>
+        <div class="passwordInputContainer">
+            <input id="passwordInput" type="Password" placeholder="Password"/>
+        </div>
+        <div class="buttonContainer">
+            <button onclick="getToken()" id="submitButton">Login or Register</button>
+        </div>
+    </div>
+</div>

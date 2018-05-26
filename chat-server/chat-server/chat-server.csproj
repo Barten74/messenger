@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <DockerComposeProjectPath>../docker-compose.dcproj</DockerComposeProjectPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="2.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="2.4.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\" />
+    <Folder Include="Views\" />
+    <Folder Include="Views\Api\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Pages\Index.cshtml" />
+    <Content Remove="Pages\EmptyMessageLayout.cshtml" />
+    <Content Remove="Views\Api\EmptyMessageLayout.cshtml" />
+    <Content Remove="Views\Api\MessageLayout.cshtml" />
+    <Content Remove="Views\Api\UserLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="nohup.out" />
+    <None Remove="Dockerfile" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Views\Api\EmptyMessageLayout.cshtml" />
+    <None Include="Views\Api\MessageLayout.cshtml" />
+    <None Include="Views\Api\UserLayout.cshtml" />
+  </ItemGroup>
+<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+  <DocumentationFile>bin\Debug\netcoreapp2.0\Swagger.xml</DocumentationFile>
+</PropertyGroup>
+</Project>

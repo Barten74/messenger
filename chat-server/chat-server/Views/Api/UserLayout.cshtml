@@ -1,0 +1,16 @@
+﻿@{
+    // Это выражение запрещает брать <header> и <footer> из файла _Layout.cshtml
+    Layout = null;
+    Dictionary<string, int> usersDict = ViewData["UsersDict"] as Dictionary<string, int>;
+}
+
+<div class=usersPanel>
+    <ul class="usersPanelList">
+        @foreach (KeyValuePair<string, int> rec in usersDict)
+        {
+            <li>
+                <a onclick="selectChat(@(rec.Value))" class="userLink">@(rec.Key)</a>
+            </li>
+        }
+    </ul>
+</div>

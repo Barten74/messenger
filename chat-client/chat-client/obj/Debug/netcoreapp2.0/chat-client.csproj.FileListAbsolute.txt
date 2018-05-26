@@ -1,0 +1,11 @@
+/Users/itonik/Projects/chat-client/chat-client/bin/Debug/netcoreapp2.0/chat-client.deps.json
+/Users/itonik/Projects/chat-client/chat-client/bin/Debug/netcoreapp2.0/chat-client.runtimeconfig.json
+/Users/itonik/Projects/chat-client/chat-client/bin/Debug/netcoreapp2.0/chat-client.runtimeconfig.dev.json
+/Users/itonik/Projects/chat-client/chat-client/bin/Debug/netcoreapp2.0/chat-client.dll
+/Users/itonik/Projects/chat-client/chat-client/bin/Debug/netcoreapp2.0/chat-client.pdb
+/Users/itonik/Projects/chat-client/chat-client/obj/Debug/netcoreapp2.0/chat-client.csprojResolveAssemblyReference.cache
+/Users/itonik/Projects/chat-client/chat-client/obj/Debug/netcoreapp2.0/chat-client.csproj.CoreCompileInputs.cache
+/Users/itonik/Projects/chat-client/chat-client/obj/Debug/netcoreapp2.0/chat-client.AssemblyInfoInputs.cache
+/Users/itonik/Projects/chat-client/chat-client/obj/Debug/netcoreapp2.0/chat-client.AssemblyInfo.cs
+/Users/itonik/Projects/chat-client/chat-client/obj/Debug/netcoreapp2.0/chat-client.dll
+/Users/itonik/Projects/chat-client/chat-client/obj/Debug/netcoreapp2.0/chat-client.pdb

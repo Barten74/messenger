@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+
+    <div class="container body-content">
+
+
+
+
+        <script>serverAdresss = "http://localhost:4000"</script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+        <script src="../js/site.js"></script>
+        <script>setRefreshInterval();</script>
+
+        <style>
+            .body-content {
+                margin-top: 40px;
+                /*text-align: center;*/
+            }
+
+            .chatWraper {
+                width: 70%;
+                height: 450px;
+                margin: auto;
+                /*max-height:450px;*/
+                /*border: 1px solid #555555;*/
+            }
+
+            .usersList {
+                width: 30%;
+                height: 100%;
+                float: left;
+                background-color: #EEE;
+                border: 1px solid #555555;
+            }
+
+            .messagePanel { /*Right column*/
+                float: right;
+                width: 70%;
+                height: 100%;
+                border: 1px solid #555555;
+                border-left-width: 0px;
+            }
+
+            .messageList { /*Contains injected div - messageListExternalContainer*/
+                width: 100%;
+                height: 80%; /*100% - 20% on SendPanel*/
+                background-color: #FFF;
+            }
+
+            .messageListExternalContainer {
+                height: 100%;
+            }
+
+            .messagesPanelContainer { /*TODO: Rename; it is injectection div*/
+                height: 100%;
+            }
+
+            .messageListContainer {
+                height: 90%; /**/
+                background-color: white;
+                overflow: auto;
+            }
+
+            .messageSendPanel {
+                width: 100%;
+                height: 20%;
+            }
+
+            .messageInputContainer {
+                width: 80%;
+                height: 100%;
+                float: left;
+            }
+
+            .sendMessageButtonContainer {
+                width: 20%;
+                height: 100%;
+                float: right;
+            }
+
+            .messageInput {
+                width: 100%;
+                height: 100%;
+            }
+
+            .sendMessageButton {
+                width: 100%;
+                height: 100%;
+            }
+
+            .friendUsername {
+                padding-top: 2%;
+                background-color: #5d8aa8;
+                color: white;
+                text-align: left;
+                padding-left: 4%;
+                height: 10%;
+            }
+
+            .friendUsernameSpan {
+                vertical-align: middle;
+            }
+
+            .messageListContainer {
+                padding-left: 4%;
+                padding-right: 4%;
+            }
+
+            .messageContainer {
+                background-color: #f0f8ff;
+                margin-top: 10px;
+            }
+
+            .userStamp {
+            }
+
+            .messageText {
+            }
+
+            .dateTimeStamp {
+                color: #a2d3ff;
+                width: 100%;
+                text-align: left;
+            }
+
+            .emptyMessageList {
+                padding-top: 48%;
+                text-align: center;
+                height: 100%;
+                color: grey;
+            }
+
+            .emptyMessageListSpan {
+                vertical-align: middle;
+            }
+
+            .userLink {
+                cursor: pointer;
+            }
+        </style>
+
+
+        <div class="chatWraper">
+            <div class="usersList">
+                <div class="userListExternalContainer" id="userListExternalContainer"></div>
+            </div>
+            <div class="messagePanel">
+                <div class="messageList">
+                    <div class="messageListExternalContainer" id="messageListExternalContainer"></div>
+                </div>
+
+                <div class="messageSendPanel">
+                    <div class="messageInputContainer">
+                        <input id="messageInput" class="messageInput" />
+                    </div>
+                    <div class=sendMessageButtonContainer>
+                        <input type="submit" onclick="sendMessage(currentChatId)" class="sendMessageButton" id="sendMessageButton" value="Send" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>var input = document.getElementById("messageInput");
+input.addEventListener("keydown", function(event) {
+                if (event.keyCode === 13) {
+                    document.getElementById("sendMessageButton").click();
+                }
+});</script>
+
+
+
+    </div>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"></script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+</body>
+</html>
